@@ -16,9 +16,9 @@ public class AtomicExpression extends Expression
     @Override
     public boolean equals(Object obj)
     {
-        if(obj instanceof AtomicExpression)
+        if(obj instanceof Expression)
         {
-            return ((AtomicExpression) obj).num == this.num;
+            return ((Expression) obj).calculate() == this.num;
         }
         return false;
     }
