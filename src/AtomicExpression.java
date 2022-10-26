@@ -17,11 +17,13 @@ public class AtomicExpression extends Expression
         this.num = num;
     }
 
+    @Override
     public double calculate()
     {
         return num;
     }
 
+    @Override
     public boolean equals(Object obj)
     {
         if(obj instanceof AtomicExpression)
