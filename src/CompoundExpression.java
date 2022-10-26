@@ -9,4 +9,24 @@ abstract class CompoundExpression extends Expression
         this.num1 = x;
         this.num2 = y;
     }
+
+    public double getNum1()
+    {
+        return num1;
+    }
+
+    public double getNum2()
+    {
+        return num2;
+    }
+
+    @Override
+    public boolean equals(Object obj)
+    {
+        if (obj instanceof Expression)
+        {
+            return ((Expression) obj).calculate() == this.calculate();
+        }
+        return false;
+    }
 }

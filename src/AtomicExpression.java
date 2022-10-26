@@ -7,16 +7,6 @@ public class AtomicExpression extends Expression
         this.num = x;
     }
 
-    public double getNum()
-    {
-        return num;
-    }
-
-    public void setNum(double num)
-    {
-        this.num = num;
-    }
-
     @Override
     public double calculate()
     {
