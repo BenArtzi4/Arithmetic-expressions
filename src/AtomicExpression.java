@@ -1,6 +1,6 @@
 public class AtomicExpression extends Expression
 {
-    private double num;
+    private final double num;
 
     public AtomicExpression(double x)
     {

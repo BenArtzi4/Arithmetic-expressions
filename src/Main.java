@@ -1,5 +1,3 @@
-import java.math.BigDecimal;
-import java.math.RoundingMode;
 import java.util.ArrayList;
 import java.util.Random;
 import java.lang.Math;
@@ -79,7 +77,7 @@ public class Main
             System.out.println("Expression" + i + " = " +  expressions.get(i).toString()  + " = " + round(expressions.get(i).calculate()));
         }
 
-        System.out.println("");
+        System.out.println();
         for (int i = 0 ; i < expressions.size() ; i ++)
         {
             for (int j = 0 ; j < expressions.size() ; j ++)

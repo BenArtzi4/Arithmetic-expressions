@@ -8,7 +8,7 @@ public class SubtractionExpression extends CompoundExpression
     @Override
     public double calculate()
     {
-        return getNum1()-getNum2();
+        return getNUM1()- getNUM2();
     }
 
     @Override
@@ -20,6 +20,6 @@ public class SubtractionExpression extends CompoundExpression
     @Override
     public String toString()
     {
-        return this.getNum1() + " - " + this.getNum2();
+        return this.getNUM1() + " - " + this.getNUM2();
     }
 }

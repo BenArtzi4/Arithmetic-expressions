@@ -1,23 +1,23 @@
 
 abstract class CompoundExpression extends Expression
 {
-    private double num1;
-    private double num2;
+    private final double NUM1;
+    private final double NUM2;
 
     public CompoundExpression(double x, double y )
     {
-        this.num1 = x;
-        this.num2 = y;
+        this.NUM1 = x;
+        this.NUM2 = y;
     }
 
-    public double getNum1()
+    public double getNUM1()
     {
-        return num1;
+        return NUM1;
     }
 
-    public double getNum2()
+    public double getNUM2()
     {
-        return num2;
+        return NUM2;
     }
 
     @Override
