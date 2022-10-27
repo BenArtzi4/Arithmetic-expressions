@@ -10,6 +10,7 @@ public class Main
         // Create an ArrayList object
         ArrayList<Expression> expressions = new ArrayList<>();
 
+        // Creating expressions of different types
         AtomicExpression num1 = new AtomicExpression(generateRandomNumber());
         AtomicExpression num2 = new AtomicExpression(generateRandomNumber());
         AdditionExpression num3 = new AdditionExpression(generateRandomNumber(), generateRandomNumber());
@@ -41,6 +42,7 @@ public class Main
         AdditionExpression num29 = new AdditionExpression(generateRandomNumber(), generateRandomNumber());
         SubtractionExpression num30 = new SubtractionExpression(generateRandomNumber(),generateRandomNumber());
 
+        //Adding variables to ArrayList
         expressions.add(num1);
         expressions.add(num2);
         expressions.add(num3);
@@ -72,12 +74,14 @@ public class Main
         expressions.add(num29);
         expressions.add(num30);
 
+        // Print the expressions
         for (int i = 0 ; i < expressions.size() ; i ++)
         {
             System.out.println("Expression" + i + " = " +  expressions.get(i).toString()  + " = " + round(expressions.get(i).calculate()));
         }
 
         System.out.println();
+        //Print the expressions with the equal values
         for (int i = 0 ; i < expressions.size() ; i ++)
         {
             for (int j = 0 ; j < expressions.size() ; j ++)
@@ -90,6 +94,9 @@ public class Main
         }
     }
 
+    /*
+    Generating a random number between minus 5 and 5
+     */
     public static double generateRandomNumber()
     {
         Random rand = new Random();
@@ -97,6 +104,9 @@ public class Main
         return round(number);
     }
 
+    /*
+    Round the number to two digits after the decimal point
+     */
     public static double round(double number)
     {
         number = (Math.round(number*10));

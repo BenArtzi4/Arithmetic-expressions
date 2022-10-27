@@ -1,4 +1,8 @@
 
+
+/*
+An abstract class called CompoundExpression that inherits from Expression and represents a compound arithmetic expression
+ */
 abstract class CompoundExpression extends Expression
 {
     private final double NUM1;

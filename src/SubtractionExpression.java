@@ -1,3 +1,7 @@
+
+/*
+A class representing a subtraction expression
+ */
 public class SubtractionExpression extends CompoundExpression
 {
     public SubtractionExpression(double x, double y)
@@ -5,17 +9,15 @@ public class SubtractionExpression extends CompoundExpression
         super(x, y);
     }
 
+    /*
+    Calculation of the value obtained from the operation and the numbers
+     */
     @Override
     public double calculate()
     {
         return getNUM1()- getNUM2();
     }
 
-    @Override
-    public boolean equals(Object obj)
-    {
-        return super.equals(obj);
-    }
 
     @Override
     public String toString()

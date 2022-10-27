@@ -1,3 +1,7 @@
+
+/*
+A class represents an atomic arithmetic expression
+ */
 public class AtomicExpression extends Expression
 {
     private final double num;
