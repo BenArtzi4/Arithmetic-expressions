@@ -11,36 +11,46 @@ public class Main
         ArrayList<Expression> expressions = new ArrayList<>();
 
         // Creating expressions of different types
-        AtomicExpression num1 = new AtomicExpression(generateRandomNumber());
-        AtomicExpression num2 = new AtomicExpression(generateRandomNumber());
-        AdditionExpression num3 = new AdditionExpression(generateRandomNumber(), generateRandomNumber());
-        SubtractionExpression num4 = new SubtractionExpression(generateRandomNumber(),generateRandomNumber());
+        Expression a1 = new AtomicExpression(generateRandomNumber());
+        Expression a2 = new AtomicExpression(generateRandomNumber());
+        Expression a3 = new AtomicExpression(generateRandomNumber());
+        Expression a4 = new AtomicExpression(generateRandomNumber());
+        Expression a5 = new AtomicExpression(generateRandomNumber());
+        AtomicExpression a6 = new AtomicExpression(generateRandomNumber());
+        AtomicExpression a7 = new AtomicExpression(generateRandomNumber());
+        AtomicExpression a8 = new AtomicExpression(generateRandomNumber());
+        AtomicExpression a9 = new AtomicExpression(generateRandomNumber());
+        AtomicExpression a10 = new AtomicExpression(generateRandomNumber());
+        AdditionExpression num1 = new AdditionExpression(a1,a2);
+        SubtractionExpression num2 = new SubtractionExpression(a3,a4);
+        AdditionExpression num3 = new AdditionExpression(a5,a6);
+        SubtractionExpression num4 = new SubtractionExpression(a7,a8);
         Expression num5 = new AtomicExpression(generateRandomNumber());
         Expression num6 = new AtomicExpression(generateRandomNumber());
-        Expression num7 = new AdditionExpression(generateRandomNumber(), generateRandomNumber());
-        Expression num8 = new AdditionExpression(generateRandomNumber(), generateRandomNumber());
-        Expression num9 = new SubtractionExpression(generateRandomNumber(), generateRandomNumber());
-        Expression num10 = new SubtractionExpression(generateRandomNumber(), generateRandomNumber());
-        CompoundExpression num11 = new SubtractionExpression(generateRandomNumber(), generateRandomNumber());
-        CompoundExpression num12 = new SubtractionExpression(generateRandomNumber(), generateRandomNumber());
-        CompoundExpression num13 = new AdditionExpression(generateRandomNumber(), generateRandomNumber());
-        CompoundExpression num14 = new AdditionExpression(generateRandomNumber(), generateRandomNumber());
-        CompoundExpression num15 = new SubtractionExpression(generateRandomNumber(), generateRandomNumber());
-        CompoundExpression num16 = new SubtractionExpression(generateRandomNumber(), generateRandomNumber());
+        Expression num7 = new AdditionExpression(a9,a10);
+        Expression num8 = new AdditionExpression(num1,num2);
+        Expression num9 = new SubtractionExpression(num3,num4);
+        Expression num10 = new SubtractionExpression(num5,num6);
+        CompoundExpression num11 = new SubtractionExpression(num7,num8);
+        CompoundExpression num12 = new SubtractionExpression(num9,num10);
+        CompoundExpression num13 = new AdditionExpression(num11,num12);
+        CompoundExpression num14 = new AdditionExpression(a1,a10);
+        CompoundExpression num15 = new SubtractionExpression(a2,a9);
+        CompoundExpression num16 = new SubtractionExpression(a3,a8);
         Expression num17 = new AtomicExpression(generateRandomNumber());
         Expression num18 = new AtomicExpression(generateRandomNumber());
-        Expression num19 = new AdditionExpression(generateRandomNumber(), generateRandomNumber());
-        Expression num20 = new AdditionExpression(generateRandomNumber(), generateRandomNumber());
-        Expression num21 = new SubtractionExpression(generateRandomNumber(), generateRandomNumber());
-        Expression num22 = new SubtractionExpression(generateRandomNumber(), generateRandomNumber());
-        CompoundExpression num23 = new SubtractionExpression(generateRandomNumber(), generateRandomNumber());
-        CompoundExpression num24 = new SubtractionExpression(generateRandomNumber(), generateRandomNumber());
-        CompoundExpression num25 = new AdditionExpression(generateRandomNumber(), generateRandomNumber());
-        CompoundExpression num26 = new AdditionExpression(generateRandomNumber(), generateRandomNumber());
-        CompoundExpression num27 = new SubtractionExpression(generateRandomNumber(), generateRandomNumber());
-        CompoundExpression num28 = new SubtractionExpression(generateRandomNumber(), generateRandomNumber());
-        AdditionExpression num29 = new AdditionExpression(generateRandomNumber(), generateRandomNumber());
-        SubtractionExpression num30 = new SubtractionExpression(generateRandomNumber(),generateRandomNumber());
+        Expression num19 = new AdditionExpression(a4,a7);
+        Expression num20 = new AdditionExpression(a5,a6);
+        Expression num21 = new SubtractionExpression(num13,num14);
+        Expression num22 = new SubtractionExpression(num15,num16);
+        CompoundExpression num23 = new SubtractionExpression(num17,num18);
+        CompoundExpression num24 = new SubtractionExpression(num19,num20);
+        CompoundExpression num25 = new AdditionExpression(num21,num22);
+        CompoundExpression num26 = new AdditionExpression(num23,num24);
+        CompoundExpression num27 = new SubtractionExpression(num25,num26);
+        CompoundExpression num28 = new SubtractionExpression(num1, num27);
+        AdditionExpression num29 = new AdditionExpression(num2, num27);
+        SubtractionExpression num30 = new SubtractionExpression(num3,num26);
 
         //Adding variables to ArrayList
         expressions.add(num1);
@@ -100,7 +110,7 @@ public class Main
     public static double generateRandomNumber()
     {
         Random rand = new Random();
-        double number = rand.nextDouble(-5, 5);
+        double number = rand.nextInt(100)/10.0;
         return round(number);
     }
 

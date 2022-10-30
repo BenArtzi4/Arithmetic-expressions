@@ -4,7 +4,7 @@ A class representing a subtraction expression
  */
 public class SubtractionExpression extends CompoundExpression
 {
-    public SubtractionExpression(double x, double y)
+    public SubtractionExpression(Expression x, Expression y)
     {
         super(x, y);
     }
