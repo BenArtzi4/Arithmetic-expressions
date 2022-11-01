@@ -5,21 +5,17 @@ An abstract class called CompoundExpression that inherits from Expression and re
  */
 abstract class CompoundExpression extends Expression
 {
-    private double num2;
+    protected final Expression x1;
+    protected final Expression x2;
 
-    public CompoundExpression(Expression x, Expression y )
+
+    public CompoundExpression(Expression e1, Expression e2 )
     {
-        this.num1 = x.num1;
-        this.num2 = y.num1;
+        this.x1 = e1;
+        this.x2 = e2;
     }
 
-    public double getNUM1()
-    {
-        return this.num1;
-    }
 
-    public double getNUM2()
-    {
-        return this.num2;
-    }
+    @Override
+    abstract public String toString();
 }

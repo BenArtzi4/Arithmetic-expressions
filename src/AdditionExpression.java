@@ -4,9 +4,9 @@ A class that represents an addition expression
  */
 public class AdditionExpression extends CompoundExpression
 {
-    public AdditionExpression(Expression x, Expression y)
+    public AdditionExpression(Expression e1, Expression e2)
     {
-        super(x, y);
+        super(e1, e2);
     }
 
     /*
@@ -15,12 +15,12 @@ public class AdditionExpression extends CompoundExpression
     @Override
     public double calculate()
     {
-        return getNUM1()+ getNUM2();
+        return x1.calculate()+ x2.calculate();
     }
 
     @Override
     public String toString()
     {
-        return this.getNUM1() + " + " + this.getNUM2();
+        return x1.toString() + " + " + x2.toString();
     }
 }

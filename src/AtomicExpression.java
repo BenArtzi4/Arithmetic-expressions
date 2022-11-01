@@ -4,21 +4,23 @@ A class represents an atomic arithmetic expression
  */
 public class AtomicExpression extends Expression
 {
+    double num;
 
     public AtomicExpression(double x)
     {
-        this.num1 = x;
+        this.num= round(x);
     }
+
 
     @Override
     public double calculate()
     {
-        return this.num1;
+        return this.num;
     }
 
 
     public String toString()
     {
-        return this.num1 + "";
+        return round(this.num) + "";
     }
 }

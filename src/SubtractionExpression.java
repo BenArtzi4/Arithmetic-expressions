@@ -4,24 +4,25 @@ A class representing a subtraction expression
  */
 public class SubtractionExpression extends CompoundExpression
 {
-    public SubtractionExpression(Expression x, Expression y)
+    public SubtractionExpression(Expression e1, Expression e2)
     {
-        super(x, y);
+        super(e1, e2);
     }
 
     /*
     Calculation of the value obtained from the operation and the numbers
      */
+
+
     @Override
     public double calculate()
     {
-        return getNUM1()- getNUM2();
+        return x1.calculate() - x2.calculate();
     }
-
 
     @Override
     public String toString()
     {
-        return this.getNUM1() + " - " + this.getNUM2();
+        return x1.toString() + " - " + x2.toString();
     }
 }

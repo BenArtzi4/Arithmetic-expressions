@@ -11,48 +11,51 @@ public class Main
         ArrayList<Expression> expressions = new ArrayList<>();
 
         // Creating expressions of different types
-        Expression a1 = new AtomicExpression(generateRandomNumber());
-        Expression a2 = new AtomicExpression(generateRandomNumber());
-        Expression a3 = new AtomicExpression(generateRandomNumber());
-        Expression a4 = new AtomicExpression(generateRandomNumber());
-        Expression a5 = new AtomicExpression(generateRandomNumber());
-        AtomicExpression a6 = new AtomicExpression(generateRandomNumber());
-        AtomicExpression a7 = new AtomicExpression(generateRandomNumber());
-        AtomicExpression a8 = new AtomicExpression(generateRandomNumber());
-        AtomicExpression a9 = new AtomicExpression(generateRandomNumber());
-        AtomicExpression a10 = new AtomicExpression(generateRandomNumber());
-        AdditionExpression num1 = new AdditionExpression(a1,a2);
-        SubtractionExpression num2 = new SubtractionExpression(a3,a4);
-        AdditionExpression num3 = new AdditionExpression(a5,a6);
-        SubtractionExpression num4 = new SubtractionExpression(a7,a8);
-        Expression num5 = new AtomicExpression(generateRandomNumber());
-        Expression num6 = new AtomicExpression(generateRandomNumber());
-        Expression num7 = new AdditionExpression(a9,a10);
-        Expression num8 = new AdditionExpression(num1,num2);
-        Expression num9 = new SubtractionExpression(num3,num4);
-        Expression num10 = new SubtractionExpression(num5,num6);
-        CompoundExpression num11 = new SubtractionExpression(num7,num8);
-        CompoundExpression num12 = new SubtractionExpression(num9,num10);
-        CompoundExpression num13 = new AdditionExpression(num11,num12);
-        CompoundExpression num14 = new AdditionExpression(a1,a10);
-        CompoundExpression num15 = new SubtractionExpression(a2,a9);
-        CompoundExpression num16 = new SubtractionExpression(a3,a8);
-        Expression num17 = new AtomicExpression(generateRandomNumber());
-        Expression num18 = new AtomicExpression(generateRandomNumber());
-        Expression num19 = new AdditionExpression(a4,a7);
-        Expression num20 = new AdditionExpression(a5,a6);
-        Expression num21 = new SubtractionExpression(num13,num14);
-        Expression num22 = new SubtractionExpression(num15,num16);
-        CompoundExpression num23 = new SubtractionExpression(num17,num18);
-        CompoundExpression num24 = new SubtractionExpression(num19,num20);
-        CompoundExpression num25 = new AdditionExpression(num21,num22);
-        CompoundExpression num26 = new AdditionExpression(num23,num24);
-        CompoundExpression num27 = new SubtractionExpression(num25,num26);
-        CompoundExpression num28 = new SubtractionExpression(num1, num27);
-        AdditionExpression num29 = new AdditionExpression(num2, num27);
-        SubtractionExpression num30 = new SubtractionExpression(num3,num26);
+        Expression num0 = new AtomicExpression(generateRandomNumber());
+        Expression num1 = new AtomicExpression(generateRandomNumber());
+        Expression num2 = new AtomicExpression(generateRandomNumber());
+        Expression num3 = new AtomicExpression(generateRandomNumber());
+        Expression num4 = new AtomicExpression(generateRandomNumber());
+        AtomicExpression num5 = new AtomicExpression(generateRandomNumber());
+        AtomicExpression num6 = new AtomicExpression(generateRandomNumber());
+        AtomicExpression num7 = new AtomicExpression(generateRandomNumber());
+        AtomicExpression num8 = new AtomicExpression(generateRandomNumber());
+        AtomicExpression num9 = new AtomicExpression(generateRandomNumber());
+        Expression num10 = new AdditionExpression(num1,num9);
+        Expression num11 = new AdditionExpression(num7,num3);
+        Expression num12 = new AdditionExpression(num2,num5);
+        Expression num13 = new AdditionExpression(num11,num0);
+        Expression num14 = new AdditionExpression(num4,num9);
+        CompoundExpression num15 = new AdditionExpression(num2,num11);
+        CompoundExpression num16 = new AdditionExpression(num1,num2);
+        CompoundExpression num17 = new AdditionExpression(num13,num15);
+        CompoundExpression num18 = new AdditionExpression(num8,num16);
+        CompoundExpression num19 = new AdditionExpression(num2,num15);
+        AdditionExpression num20 = new AdditionExpression(num0,num16);
+        AdditionExpression num21 = new AdditionExpression(num0,num12);
+        AdditionExpression num22 = new AdditionExpression(num4,num18);
+        AdditionExpression num23 = new AdditionExpression(num8,num5);
+        AdditionExpression num24 = new AdditionExpression(num10,num14);
+        Expression num25 = new SubtractionExpression(num12,num7);
+        Expression num26 = new SubtractionExpression(num6,num8);
+        Expression num27 = new SubtractionExpression(num16,num19);
+        Expression num28 = new SubtractionExpression(num20,num21);
+        Expression num29 = new SubtractionExpression(num9,num27);
+        CompoundExpression num30 = new SubtractionExpression(num21,num18);
+        CompoundExpression num31 = new SubtractionExpression(num11,num11);
+        CompoundExpression num32 = new SubtractionExpression(num7,num8);
+        CompoundExpression num33 = new SubtractionExpression(num21,num1);
+        CompoundExpression num34 = new SubtractionExpression(num4,num32);
+        SubtractionExpression num35 = new SubtractionExpression(num22,num27);
+        SubtractionExpression num36 = new SubtractionExpression(num5,num19);
+        SubtractionExpression num37 = new SubtractionExpression(num1,num18);
+        SubtractionExpression num38 = new SubtractionExpression(num36,num6);
+        SubtractionExpression num39 = new SubtractionExpression(num38,num37);
+
+
 
         //Adding variables to ArrayList
+
         expressions.add(num1);
         expressions.add(num2);
         expressions.add(num3);
@@ -83,23 +86,39 @@ public class Main
         expressions.add(num28);
         expressions.add(num29);
         expressions.add(num30);
+        expressions.add(num31);
+        expressions.add(num32);
+        expressions.add(num33);
+        expressions.add(num34);
+        expressions.add(num35);
+        expressions.add(num36);
+        expressions.add(num37);
+        expressions.add(num38);
+        expressions.add(num39);
+
+
+
 
         // Print the expressions
         for (int i = 0 ; i < expressions.size() ; i ++)
         {
-            System.out.println("Expression" + i + " = " +  expressions.get(i).toString()  + " = " + round(expressions.get(i).calculate()));
+            System.out.println("Expression" + i + " = " +  expressions.get(i).toString()  + " = " + expressions.get(i).calculate());
         }
 
         System.out.println();
         //Print the expressions with the equal values
         for (int i = 0 ; i < expressions.size() ; i ++)
         {
-            for (int j = 0 ; j < expressions.size() ; j ++)
+            for (int j = i+1 ; j < expressions.size() ; j ++)
             {
                 if (i != j && expressions.get(i).equals(expressions.get(j)))
-                System.out.println("Expression" + i + " = " + expressions.get(i)
-                        + " Expression" + j + " = " + expressions.get(j)
-                        + "\nAre they equals? " + expressions.get(i).equals(expressions.get(j)) + "\n");
+                System.out.println(
+                                "Expression" + i + " = " + expressions.get(i).toString() + "\n" +
+                                "Expression" + j + " = " + expressions.get(j).toString() + "\n" +
+                                "Are they equals? " + expressions.get(i).equals(expressions.get(j)) + "\n" +
+                                "Expression" + i + " = " + expressions.get(i).calculate() + "\n" +
+                                "Expression" + j + " = " + expressions.get(j).calculate() + "\n"
+                );
             }
         }
     }
@@ -107,19 +126,11 @@ public class Main
     /*
     Generating a random number between minus 5 and 5
      */
-    public static double generateRandomNumber()
+    static double generateRandomNumber()
     {
         Random rand = new Random();
-        double number = rand.nextInt(100)/10.0;
-        return round(number);
+        double number = (rand.nextInt(100)*rand.nextInt(100)/100.0);
+        return number;
     }
 
-    /*
-    Round the number to two digits after the decimal point
-     */
-    public static double round(double number)
-    {
-        number = (Math.round(number*10));
-        return number/10;
-    }
 }
