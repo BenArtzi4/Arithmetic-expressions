@@ -1,4 +1,3 @@
-import java.util.Random;
 
 /*
 An abstract class that represents an arithmetic expression

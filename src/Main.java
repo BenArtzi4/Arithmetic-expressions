@@ -1,6 +1,5 @@
 import java.util.ArrayList;
 import java.util.Random;
-import java.lang.Math;
 
 
 public class Main
@@ -102,7 +101,7 @@ public class Main
         // Print the expressions
         for (int i = 0 ; i < expressions.size() ; i ++)
         {
-            System.out.println("Expression" + i + " = " +  expressions.get(i).toString()  + " = " + expressions.get(i).calculate());
+            System.out.println("Expression" + i + " = " +  expressions.get(i).toString()  + " = " + Expression.round(expressions.get(i).calculate()));
         }
 
         System.out.println();
@@ -116,21 +115,20 @@ public class Main
                                 "Expression" + i + " = " + expressions.get(i).toString() + "\n" +
                                 "Expression" + j + " = " + expressions.get(j).toString() + "\n" +
                                 "Are they equals? " + expressions.get(i).equals(expressions.get(j)) + "\n" +
-                                "Expression" + i + " = " + expressions.get(i).calculate() + "\n" +
-                                "Expression" + j + " = " + expressions.get(j).calculate() + "\n"
+                                "Expression" + i + " = " + Expression.round(expressions.get(i).calculate()) + "\n" +
+                                "Expression" + j + " = " + Expression.round(expressions.get(j).calculate()) + "\n"
                 );
             }
         }
     }
 
     /*
-    Generating a random number between minus 5 and 5
+    Generating a random number between minus 0. and 5
      */
     static double generateRandomNumber()
     {
         Random rand = new Random();
-        double number = (rand.nextInt(100)*rand.nextInt(100)/100.0);
-        return number;
+        return ((rand.nextInt(1000))/100.0);
     }
 
 }
