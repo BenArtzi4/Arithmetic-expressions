@@ -12,6 +12,9 @@ public class AtomicExpression extends Expression
     }
 
 
+    /*
+    Calculating the value of the expression
+     */
     @Override
     public double calculate()
     {
@@ -19,6 +22,9 @@ public class AtomicExpression extends Expression
     }
 
 
+    /*
+    Return the expression as String
+     */
     public String toString()
     {
         return round(this.num) + "";

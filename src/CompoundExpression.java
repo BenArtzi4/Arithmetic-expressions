@@ -15,7 +15,4 @@ abstract class CompoundExpression extends Expression
         this.x2 = e2;
     }
 
-
-    @Override
-    abstract public String toString();
 }

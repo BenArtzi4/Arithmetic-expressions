@@ -13,13 +13,15 @@ public class SubtractionExpression extends CompoundExpression
     Calculation of the value obtained from the operation and the numbers
      */
 
-
     @Override
     public double calculate()
     {
         return x1.calculate() - x2.calculate();
     }
 
+    /*
+    Return the expression as String
+     */
     @Override
     public String toString()
     {

@@ -18,6 +18,9 @@ public class AdditionExpression extends CompoundExpression
         return x1.calculate()+ x2.calculate();
     }
 
+    /*
+    Return the expression as String
+    */
     @Override
     public String toString()
     {
