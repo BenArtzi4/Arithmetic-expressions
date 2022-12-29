@@ -1,4 +1,4 @@
-#Arithmetic Expression Program
+# Arithmetic Expression Program
 
 Welcome to the Arithmetic Expression program, written in Java!
 
